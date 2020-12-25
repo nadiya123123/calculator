@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">calculator</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+              <a class="nav-link" href="asd.html">ASD</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <table class="table">
+                    <tr>
+                        <td>FirstNumber</td>
+                        <td><input id="num1" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>SecondNumber</td>
+                        <td><input id="num2" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button onclick="addition()" class="btn btn-secondary">ADD</button>
+                            <button onclick="substraction()" class="btn btn-secondary">SUB</button>
+                            <button onclick="division()" class="btn btn-secondary">DIV</button>
+                        </td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td>RESULT</td>
+                        <td><p id="DisplayResult"></p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function addition(){
+            var getFirstNumber=parseInt(document.getElementById("num1").value)
+            var getSecondNumber=parseInt(document.getElementById("num2").value)
+            var DisplayResult=getFirstNumber+getSecondNumber
+            document.getElementById("DisplayResult").innerHTML=DisplayResult
+        }
+        function substraction(){
+            var getFirstNumber=parseInt(document.getElementById("num1").value)
+            var getSecondNumber=parseInt(document.getElementById("num2").value)
+            var DisplayResult=getFirstNumber-getSecondNumber
+            document.getElementById("DisplayResult").innerHTML=DisplayResult
+        }
+        function division(){
+            var getFirstNumber=parseInt(document.getElementById("num1").value)
+            var getSecondNumber=parseInt(document.getElementById("num2").value)
+            var DisplayResult=getFirstNumber/getSecondNumber
+            document.getElementById("DisplayResult").innerHTML=DisplayResult
+        }
+    </script>
+
+    
+</body>
+</html>
